@@ -11,4 +11,5 @@ All of these are concatenated into a single feature vector and passed into a Ran
 The trained model is deployed in an interactive Streamlit web app. Users type two questions into side-by-side text boxes and click "Check Similarity" to get an instant prediction, along with a "How it works" tab explaining the underlying methodology for anyone curious about the mechanics.
 One interesting edge case I worked through during development: very short questions made entirely of stopwords (like "how are you?") initially confused the non-stopword overlap features, since stopword removal left nothing to compare. I patched the feature extraction logic so that when both questions reduce to nothing after stopword removal, they're treated as a full match rather than a forced mismatch — a small but meaningful fix for short, conversational-style questions.
 Tech stack: Python, scikit-learn (Random Forest, CountVectorizer), NLTK, FuzzyWuzzy, BeautifulSoup, NumPy, Streamlit
+
 dataset: (https://www.kaggle.com/datasets/bruce0001/quora-question-pairs)
