@@ -51,6 +51,3 @@ with tab2:
 
     By combining these, the model can detect semantic similarity even when the questions share few exact words.
     """)
-
-#     By combining these, the model can detect semantic similarity even when the questions share few exact words.
-#     """)
